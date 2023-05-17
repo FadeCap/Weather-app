@@ -12,14 +12,13 @@ h1 {
 }
 
 .info-container {
-    background-color: #fffb00;
+    background-color: #50187e;
     border-radius: 12px;
     color: white;
     display: flex;
     flex-direction: column;
     text-align: center;
     max-width: 50rem;
-    box-shadow: 0 0 30px 10px rgba(255, 255, 0, 0.5);
 }
 
 .form {
@@ -92,3 +91,5 @@ h1 {
   }
 
 
+/* box-shadow: 0 0 30px 10px rgba(255, 255, 0, 0.5);
+for making the container have a glow outside */
