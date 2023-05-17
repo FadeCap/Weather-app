@@ -1,7 +1,9 @@
-import Weather from "./components/Weather.js";
+import WeatherCard from "./components/weatherCard.js";
 const app = document.getElementById('root');
 
 
+
+app.innerHTML = `${WeatherCard()}`
 
 
 
