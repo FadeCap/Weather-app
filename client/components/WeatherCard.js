@@ -1,20 +1,25 @@
+import WeatherInformation from "./WeatherInformation.js";
 const WeatherCard = () => {
 
   const mockData = {
     name: "Skodje",
-    temp: 5,
+    temp: 2,
     feels_like: 4,
-    weatherType: "Fint",
-    description: "Kjempe fint ute"
+    weatherType: "Drizzle",
+    description: "Light rainfall, cloudy"
   }
 
   return `
   <h1> Weather </h1>
-  <form>
-  <input id="weather-input" name="search">
-  <label for="search">Search</label>
-  </form>
-  <button class="submit-btn" type="submit">Submit</button>
+  <div>
+    <form class="form">
+    <input id="weather-input" name="search">
+    <label for="search"></label>
+      <button class="fetchButton" onclick="fetchData()" type="submit">Submit
+      </button>
+    </form>
+    ${WeatherInformation(mockData)}
+  </div>
 `;
 };
 
