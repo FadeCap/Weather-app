@@ -52,4 +52,9 @@ function createRaindrops() {
   }
 
   stopRainAnimation();
+
+  function handleClick(){
+    console.log("click")
+    return 0
+  }
   

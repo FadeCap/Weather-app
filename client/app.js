@@ -3,21 +3,9 @@ const app = document.getElementById('root');
 
 
 
-app.innerHTML = `${WeatherCard()}`
+async function render(){
+    const content = await WeatherCard()
+    app.innerHTML = content
+}
+render()
 
-
-
-
-
-
-
-
-
-
-
-// app.innerHTML = `
-// <div>
-// ${Weather()}
-// </div>
-// <button id="btn">click me</button>
-// `

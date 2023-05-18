@@ -1,24 +1,22 @@
 import WeatherInformation from "./WeatherInformation.js";
-const WeatherCard = () => {
+import getWeatherData from "../service/getWeatherData.js";
 
-  const mockData = {
-    name: "Skodje",
-    temp: 2,
-    feels_like: 4,
-    weatherType: "Drizzle",
-    description: "Light rainfall, cloudy"
-  }
+const WeatherCard = async () => {
+
+  const weatherData = await getWeatherData("Ålesund")
+ 
+
 
   return `
   <h1> Weather </h1>
   <div>
     <form class="form">
-    <input id="weather-input" name="search">
+    <input onclick="handleClick()" id="weather-input" name="search">
     <label for="search"></label>
-      <button class="fetchButton" onclick="fetchData()" type="submit">Submit
+      <button class="fetchButton"  type="submit">Submit
       </button>
     </form>
-    ${WeatherInformation(mockData)}
+    ${WeatherInformation(weatherData)}
   </div>
 `;
 };
